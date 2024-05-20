@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/4bea204677.js" crossorigin="anonymous"></script>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+    <!-- Navbar Section START -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Admin Dash</a>
+
+          <div class="btn-slide navbar-toggler me-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="open" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="close d-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reports</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Role</a></li>
+                  <li><a class="dropdown-item" href="#">Permissions</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Modules</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item mt-2 me-4">
+                    <div class="p-2 shadow border border-1 border-success rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                            <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+                            <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+                        </svg>
+                    </div>
+                </li>
+                <li class="nav-item mt-2 me-4">
+                    <div class="p-2 shadow border border-1 border-success rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                          </svg>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-inline-block shadow border border-1 border-success rounded" style="padding: 5px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png" class="img-fluid " style="width: 30px; height:30px;" alt="">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" style="left: -100px;" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar Section END -->
+
+
+<!--Side Menu Bar START-->
+<div class="side-nav">
+  <ul class="nav flex-column">
+    <li class="nav-item"><a class="nav-link disabled">Side Menu</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fa fa-dashboard"></i> Dashboard</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fa fa-area-chart"></i> Charts</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fa fa-table"></i> Tables</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fa fa-wrench"></i> Components</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fa fa-file"></i> Pages</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fa fa-link"></i> Links</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"> <i class="fas fa-calendar-check"></i> Calender</a></li>
+  </ul>
+</div>
+<!--Side Menu Bar END-->
+
+<!--Main Content START-->
+<div class="main-content">
+  <div class="container-fluid">
+
+    <!--Breadcrumb Area-->
+    <div class="col-12 pt-4">
+      <div class="mt-5 py-3 px-5 bg-white shadow-sm rounded-3">
+        <nav class="" style="--bs-breadcrumb-divider: '>' ;" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#" class="">Home</a></li>
+            <li class="breadcrumb-item active">Statistics</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!--Breadcrumb Area-->
+
+
+    <!--Content Area-->
+    <div class="row">
+      <div class="col-lg-3 col-md-6 py-3">
+        <div class="bg-white shadow-sm rounded-3 d-flex justify-content-between p-4">
+
+          <div class="">
+            <p class="small">Customers</p>
+            <p class="fw-bold fs-3">25,444</p>
+            <p class="mb-0"><span class="text-danger">
+              <i class="fas fa-arrow-down"></i> 2.21%
+            </span>Since Last month</p>
+          </div>
+          <i class="fas fa-user-check fa-2x stats"></i>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 py-3">
+        <div class="bg-white shadow-sm rounded-3 d-flex justify-content-between p-4">
+
+          <div class="">
+            <p class="small">Orders</p>
+            <p class="fw-bold fs-3">2556</p>
+            <p class="mb-0"><span class="text-success">
+              <i class="fas fa-arrow-up"></i> 2.21%
+            </span>Since Last month</p>
+          </div>
+          <i class="fas fa-cart-plus fa-2x stats"></i>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 py-3">
+        <div class="bg-white shadow-sm rounded-3 d-flex justify-content-between p-4">
+
+          <div class="">
+            <p class="small">Revenue</p>
+            <p class="fw-bold fs-3">4425</p>
+            <p class="mb-0"><span class="text-success">
+              <i class="fas fa-arrow-up"></i> 3.21%
+            </span>Since Last month</p>
+          </div>
+          <i class="fas fa-dollar-sign fa-2x stats"></i>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 py-3">
+        <div class="bg-white shadow-sm rounded-3 d-flex justify-content-between p-4">
+
+          <div class="">
+            <p class="small">Growth</p>
+            <p class="fw-bold fs-3">14.25%</p>
+            <p class="mb-0"><span class="text-success">
+              <i class="fas fa-arrow-up"></i> 1.19%
+            </span>Since Last month</p>
+          </div>
+          <i class="fas fa-chart-bar fa-2x stats"></i>
+        </div>
+      </div>
+    </div>
+    <!--Content Area-->
+
+    <!--Charts Section START-->
+    <div class="row">
+      <div class="col-lg-7 col-md-6 py-3">
+        <div class="bg-white shadow-sm rounded-3 p-4">
+          <canvas id="myChart" height="200"></canvas>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 py-3">
+        <div class="bg-white shadow-sm rounded-3 p-4">
+          <canvas id="myChart1" height="200"></canvas>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 py-3">
+        <div class="bg-white shadow-sm rounded-3 p-4">
+          <canvas id="myChart2" height="200"></canvas>
+        </div>
+      </div>
+
+    </div>
+    <!--Charts Section END-->
+
+  </div>
+</div>
+<!--Main Content END-->
+
+
+
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+</body>
+</html>
